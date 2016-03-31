@@ -96,3 +96,9 @@ Markup overrides provider definitions
 - ion-zoom-events: Enable/Disable all zoom events in slider (pinchToZoom, tap and double tap). Default: true
 
           <ion-gallery ion-gallery-items="items" ion-zoom-events="true"></ion-gallery>
+
+- ion-item-destroy-callback: Allow to define function to destroy images through small button over the image. 
+
+          <ion-gallery ion-gallery-items="items" ion-zoom-events="true" ion-item-destroy-callback="yourCustomFunction(item)></ion-gallery>
+
+          yourCustomFunction is a funcion you have to define in your own view controller. Each gallery item must have a property "destroy_enabled set to true to render destroy button"
