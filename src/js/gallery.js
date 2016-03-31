@@ -14,7 +14,8 @@
         ionGalleryItems: '=ionGalleryItems',
         ionGalleryRowSize: '=?ionGalleryRow',
         ionItemCallback: '&?ionItemCallback',
-        ionZoomEvents: '=?ionZoomEvents'
+        ionZoomEvents: '=?ionZoomEvents',
+        ionItemDestroyCallback: '&?ionItemDestroyCallback'
       },
       controller: controller,
       link: link,
@@ -47,9 +48,9 @@
     }
 
     function link(scope, element, attrs) {
-
-      scope.customCallback = angular.isFunction(scope.ionItemCallback) && attrs.hasOwnProperty('ionItemCallback');
-      scope.ionSliderToggle = attrs.ionGalleryToggle === 'false' ? false : ionGalleryConfig.toggle;
+      scope.customCallback        = angular.isFunction(scope.ionItemCallback) && attrs.hasOwnProperty('ionItemCallback');
+      scope.customDestroyCallback = angular.isFunction(scope.ionItemDestroyCallback) && attrs.hasOwnProperty('ionItemDestroyCallback');
+      scope.ionSliderToggle       = attrs.ionGalleryToggle === 'false' ? false : ionGalleryConfig.toggle;
     }
   }
 })();

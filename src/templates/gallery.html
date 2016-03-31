@@ -1,11 +1,18 @@
 <div class="gallery-view">
   <div class="row" ng-repeat="item in items track by $index" ion-row-height>
-    <div ng-repeat="photo in item track by $index"
-         class="col col-{{responsiveGrid}} image-container">
+    <div ng-repeat="photo in item track by $index" class="col col-{{responsiveGrid}} image-container">
 
-      <img ion-image-scale
-           ng-src="{{photo.thumb || photo.src}}"
-           ng-click="customCallback ? ionItemCallback({item:photo}) : openSlider(photo.position)">
+      <button
+        ng-if="photo.destroy_enabled && customDestroyCallback"
+        class="destroy-image button btn-primary button-small" 
+        ng-click="customDestroyCallback ? ionItemDestroyCallback({item:photo}) : openSlider(photo.position)">
+        <i class="ion-trash-a"></i> {{photo.id}}
+      </button>      
+
+      <img
+        ion-image-scale
+        ng-src="{{photo.thumb || photo.src}}"
+        ng-click="customCallback ? ionItemCallback({item:photo}) : openSlider(photo.position)">
 
     </div>
   </div>
