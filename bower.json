@@ -9,7 +9,9 @@
     "slider"
   ],
   "authors": [
-    "Pedro Abreu <pmig.abreu@gmail.com>"
+    "Pedro Abreu <pmig.abreu@gmail.com>",
+    "Senén Rodero Rodríguez <senen@rockandror.com>",
+    "Sebastiá Roig Pieras <sebastia@rockandror.com>"
   ],
   "license": "MIT",
   "ignore": [
