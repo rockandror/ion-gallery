@@ -4,9 +4,9 @@
 
       <button
         ng-if="photo.destroy_enabled && customDestroyCallback"
-        class="destroy-image button btn-primary button-small" 
+        class="destroy-image button btn-assertive" 
         ng-click="customDestroyCallback ? ionItemDestroyCallback({item:photo}) : openSlider(photo.position)">
-        <i class="ion-trash-a"></i> {{photo.id}}
+        <i class="ion-trash-a"></i>
       </button>      
 
       <img
