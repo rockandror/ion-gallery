@@ -5,6 +5,12 @@
     overflow: hidden;
     border: 2px solid white;
     
+    button.destroy-image{
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      z-index: 9999;
+    }
     img{
       position: absolute;
       top: -9999px;

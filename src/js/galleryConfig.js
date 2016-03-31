@@ -17,11 +17,11 @@
     };
 
     this.$get = function() {
-        return this.config;
+      return this.config;
     };
 
     this.setGalleryConfig = function(config) {
-        angular.extend(this.config, this.config, config);
+      angular.extend(this.config, this.config, config);
     };
   }
 
