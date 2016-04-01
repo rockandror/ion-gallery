@@ -7,14 +7,16 @@
     
     button.destroy-image{
       position: absolute;
-      top: 4px;
-      right: 4px;
+      bottom: 0px;
+      right: 0px;
       z-index: 9999;
       padding: 0px;
-      min-width: 12px;
-      min-height: 12px;
-      border-radius: 4px;
-      line-height: 0px;      
+      min-width: 42px;
+      min-height: 42px;
+      border-radius: 0px;
+      line-height: 0px;
+      background: #A69879;
+      color: white;
     }
     img{
       position: absolute;
