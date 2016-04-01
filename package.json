@@ -22,9 +22,9 @@
     "slider"
   ],
   "author": "Pedro Abreu <pmig.abreu@gmail.com>",
-  "contributors": {
+  "contributors": [
     "Senén Rodero Rodríguez <senen@rockandror.com>",
     "Sebastiá Roig Pieras <sebastia@rockandror.com>"    
-  }  
+  ],  
   "license": "MIT"
 }
