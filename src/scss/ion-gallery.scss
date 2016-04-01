@@ -7,8 +7,8 @@
     
     button.destroy-image{
       position: absolute;
-      bottom: 0px;
-      right: 0px;
+      bottom: 1%;
+      right: 1%;
       z-index: 9999;
       padding: 0px;
       min-width: 28px;
@@ -16,6 +16,7 @@
       border-radius: 0px;
       line-height: 0px;
       background: transparent;
+      border: 1px solid #A69879;
       color: #A69879;
     }
     img{
