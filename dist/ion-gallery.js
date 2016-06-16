@@ -49,8 +49,9 @@
 
     function link(scope, element, attrs) {
       scope.customItemAction = angular.isFunction(scope.ionItemAction) && attrs.hasOwnProperty('ionItemAction');
-      scope.ionSliderToggle = attrs.ionGalleryToggle === 'false' ? false : ionGalleryConfig.toggle;
       scope.customDestroyCallback = angular.isFunction(scope.ionItemDestroyCallback) && attrs.hasOwnProperty('ionItemDestroyCallback');
+      scope.customCallback = angular.isFunction(scope.ionItemCallback) && attrs.hasOwnProperty('ionItemCallback');
+      scope.ionSliderToggle = attrs.ionGalleryToggle === 'false' ? false : ionGalleryConfig.get('toggle');
       ionGalleryConfig.set('modal_animation',attrs.ionModalAnimation || 'none');
     }
   }
