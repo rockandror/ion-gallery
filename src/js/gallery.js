@@ -27,8 +27,8 @@
       var _rowSize = parseInt($scope.ionGalleryRowSize);
 
       var _drawGallery = function () {
-        $scope.ionGalleryRowSize = ionGalleryHelper.getRowSize(_rowSize || ionGalleryConfig.row_size, $scope.ionGalleryItems.length);
-        $scope.actionLabel = ionGalleryConfig.action_label;
+        $scope.ionGalleryRowSize = ionGalleryHelper.getRowSize(_rowSize || ionGalleryConfig.get('row_size'), $scope.ionGalleryItems.length);
+        $scope.actionLabel = ionGalleryConfig.get('action_label');
         $scope.items = ionGalleryHelper.buildGallery($scope.ionGalleryItems, $scope.ionGalleryRowSize);
         $scope.responsiveGrid = parseInt((1 / $scope.ionGalleryRowSize) * 100);
       };
@@ -44,13 +44,13 @@
           }
         });
       }());
-
     }
 
     function link(scope, element, attrs) {
       scope.customItemAction = angular.isFunction(scope.ionItemAction) && attrs.hasOwnProperty('ionItemAction');
       scope.ionSliderToggle = attrs.ionGalleryToggle === 'false' ? false : ionGalleryConfig.toggle;
       scope.customDestroyCallback = angular.isFunction(scope.ionItemDestroyCallback) && attrs.hasOwnProperty('ionItemDestroyCallback');
+      ionGalleryConfig.set('modal_animation',attrs.ionModalAnimation || 'none');
     }
   }
 })();
